@@ -1,0 +1,30 @@
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deploy 
+  labels:
+    app: myapp
+    env: lab
+
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  replicas: 2
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        env: lab
+        tier: frontend 
+        version: v1_AC
+    spec:
+      containers:
+        - name: myapp-pod-cont
+          image: sravani2310/myapp:1
+          ports:
+            - containerPort: 8080
