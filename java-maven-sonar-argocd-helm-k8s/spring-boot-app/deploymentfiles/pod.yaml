@@ -12,4 +12,4 @@ metadata:
 spec:
   containers:
     - name: myapp-cont-1
-      image: myapp:latest
+      image: sravani2310/myapp:19
