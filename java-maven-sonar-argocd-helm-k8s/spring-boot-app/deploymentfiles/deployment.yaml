@@ -25,6 +25,6 @@ spec:
     spec:
       containers:
         - name: myapp-pod-cont
-          image: sravani2310/myapp:1
+          image: sravani2310/myapp:19
           ports:
             - containerPort: 8080
